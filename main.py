@@ -10,8 +10,8 @@ import numpy as np                                        #used in tensorflow fo
 import pandas as pd
 
 
-from data_preprocessing import data_preprocessing      #import data_preprocessing function from data_preprocessing.py
-training, output,labels, words, data = data_preprocessing(stemmer)
+#from data_preprocessing import data_preprocessing      #import data_preprocessing function from data_preprocessing.py
+#training, output,labels, words, data = data_preprocessing(stemmer)
 
 
     
@@ -19,7 +19,7 @@ training, output,labels, words, data = data_preprocessing(stemmer)
 
 from sklearn.model_selection import train_test_split #for spliting data (testing data,training data)
 
-X_train, X_test, y_train,y_test = train_test_split(training,output,test_size=0.3) #training 70% , testing 30%
+#X_train, X_test, y_train,y_test = train_test_split(training,output,test_size=0.3) #training 70% , testing 30%
 
 # print(X_train.shape,y_train.shape)
 # print(X_test.shape,y_test.shape)
@@ -44,9 +44,9 @@ def bag_of_words(s, words):                #s:sentence
             if w == se:
                 bag[i] = 1                #but 1 if the word already exists
             
-    return numpy.array(bag)               #convert bag to numpy array
+    #return numpy.array(bag)               #convert bag to numpy array
 
             
 #### main file   
-from chat import  chat                           #import the function that called chat from chat.py
-chat(model,bag_of_words,labels,words,data)      #call chat function
+#from chat import  chat                           #import the function that called chat from chat.py
+#chat(model,bag_of_words,labels,words,data)      #call chat function
